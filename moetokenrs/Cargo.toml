@@ -1,0 +1,16 @@
+[package]
+name = "moetokenrs"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "moetoken"
+crate-type = ["staticlib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.75"
+libc = "0.2.150"
+parking_lot = "0.12.1"
+tiktoken-rs = "0.5.6"
