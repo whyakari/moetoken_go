@@ -40,7 +40,6 @@ pub extern "C" fn get_qtd_tokens(model_name: *const libc::c_char, txt: *const li
 
     let tokenizer = get_tokenizer(model_name).ok_or_else( ||anyhow!("Model {} does not exist!", model_name)).unwrap();
 
-
     let moe = get_token(tokenizer).unwrap();
     let result: usize = moe.lock().encode_with_special_tokens(txt).len();
 
